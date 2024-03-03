@@ -1,4 +1,5 @@
 import PokemonCard from './components/PokemonCard'
+import NavBar from './components/NavBar'
 import './App.css'
 import { useState } from 'react';
 
@@ -52,8 +53,7 @@ function App() {
   return (
     <div>
        <PokemonCard pokemon={pokemon}/>
-      {pokemonIndex > 0 && <button onClick={handlePrev}>Précédent</button>}
-      {pokemonIndex < pokemonList.length - 1 && <button onClick={handleNext}>Suivant</button>}
+       <NavBar onPrev={handlePrev} onNext={handleNext} />
     </div>
   )
 
